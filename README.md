@@ -7,7 +7,7 @@
 <h3 align="center">uniFood</h3>
 
   <p align="center">
-    Projeto criado de universitário, para universitário, em que será realizada a criação de aplicativos para realizar pedidos em lanchonetes universitárias. 
+    Projeto criado por universitários, para universitários, em que será realizada a criação de aplicativos para realizar pedidos em lanchonetes universitárias. 
     <br />
     <br />
     Com foco na conveniência e agilidade, o projeto busca melhorar a experiência do usuário, otimizar o tempo dos estudantes e alinhar-se com a crescente digitalização de serviços financeiros em ambientes educacionais. 
