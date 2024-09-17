@@ -22,10 +22,8 @@
   <summary>Conteúdos</summary>
   <ol>
     <li>
-      <ul>
-        <li><a href="#sobre-o-projeto">Sobre o Projeto</a></li>
-      </ul>
-      <ul  
+      <a href="#sobre-o-projeto">Sobre o Projeto</a>
+      <ul> 
         <li><a href="#feito-com">Feito Com</a></li>
       </ul>
     </li>
