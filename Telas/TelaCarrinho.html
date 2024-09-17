@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniFood - Carrinho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="40" viewBox="0 0 28 40" fill="none">
+                <path d="M14 2.5H8.16665C6.61955 2.5 5.13582 3.11458 4.04186 4.20854C2.94789 5.30251 2.33331 6.78624 2.33331 8.33333C2.33331 9.88043 2.94789 11.3642 4.04186 12.4581C5.13582 13.5521 6.61955 14.1667 8.16665 14.1667M14 2.5V14.1667M14 2.5H19.8333C20.5994 2.5 21.3579 2.65088 22.0656 2.94404C22.7734 3.23719 23.4164 3.66687 23.9581 4.20854C24.4998 4.75022 24.9295 5.39328 25.2226 6.10101C25.5158 6.80875 25.6666 7.56729 25.6666 8.33333C25.6666 9.09938 25.5158 9.85792 25.2226 10.5657C24.9295 11.2734 24.4998 11.9164 23.9581 12.4581C23.4164 12.9998 22.7734 13.4295 22.0656 13.7226C21.3579 14.0158 20.5994 14.1667 19.8333 14.1667M14 14.1667H8.16665M14 14.1667H19.8333M14 14.1667V25.8333M8.16665 14.1667C6.61955 14.1667 5.13582 14.7812 4.04186 15.8752C2.94789 16.9692 2.33331 18.4529 2.33331 20C2.33331 21.5471 2.94789 23.0308 4.04186 24.1248C5.13582 25.2188 6.61955 25.8333 8.16665 25.8333M19.8333 14.1667C19.0673 14.1667 18.3087 14.3175 17.601 14.6107C16.8933 14.9039 16.2502 15.3335 15.7085 15.8752C15.1668 16.4169 14.7372 17.0599 14.444 17.7677C14.1509 18.4754 14 19.234 14 20C14 20.766 14.1509 21.5246 14.444 22.2323C14.7372 22.9401 15.1668 23.5831 15.7085 24.1248C16.2502 24.6665 16.8933 25.0961 17.601 25.3893C18.3087 25.6824 19.0673 25.8333 19.8333 25.8333C20.5994 25.8333 21.3579 25.6824 22.0656 25.3893C22.7734 25.0961 23.4164 24.6665 23.9581 24.1248C24.4998 23.5831 24.9295 22.9401 25.2226 22.2323C25.5158 21.5246 25.6666 20.766 25.6666 20C25.6666 19.234 25.5158 18.4754 25.2226 17.7677C24.9295 17.0599 24.4998 16.4169 23.9581 15.8752C23.4164 15.3335 22.7734 14.9039 22.0656 14.6107C21.3579 14.3175 20.5994 14.1667 19.8333 14.1667ZM8.16665 25.8333C6.61955 25.8333 5.13582 26.4479 4.04186 27.5419C2.94789 28.6358 2.33331 30.1196 2.33331 31.6667C2.33331 33.2138 2.94789 34.6975 4.04186 35.7915C5.13582 36.8854 6.61955 37.5 8.16665 37.5C9.71374 37.5 11.1975 36.8854 12.2914 35.7915C13.3854 34.6975 14 33.2138 14 31.6667V25.8333M8.16665 25.8333H14" stroke="#1E1E1E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="header-right">
+            <div class="profile-dropdown">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYf_eHgBhH4luXMbkjPsRInneXi3OKPUya5w&s" alt="Profile" class="profile-img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 16 16" fill="none" class="arrow-down">
+                    <path d="M4 6L8 10L12 6" stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="dropdown-content">
+                    <a href="#">Perfil</a>
+                    <a href="#">Configurações</a>
+                    <a href="#">Sair</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div id="back-to-menu" style="cursor: pointer; margin-bottom: 20px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="16" viewBox="0 0 26 16" fill="none">
+              <path d="M25 9C25.5523 9 26 8.55228 26 8C26 7.44772 25.5523 7 25 7V9ZM0.292893 7.29289C-0.0976311 7.68342 -0.0976311 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292893 7.29289ZM25 7H1V9H25V7Z" fill="black"/>
+            </svg>
+        </div>
+
+        <h1>Meu Carrinho</h1>
+        <div class="grid-container">
+            <div class="line-container" id="cart-items">
+                <!-- Itens do carrinho serão inseridos aqui dinamicamente pelo JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-menu">
+        <div class="bottom-menu-content">
+            <span id="cart-total">Total: R$0,00 / 0 itens</span>
+            <button id="comprar-btn" class="cart-button">Comprar</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

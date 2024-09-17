@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+    border-bottom: 0.5px solid #000000;
+    height: 60px;
+}
+
+.header-left {
+    display: flex;
+    gap: 10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.profile-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.arrow-down {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none; /* Escondido por padrão */
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+.content {
+    margin: 40px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+}
+
+.content h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+.content p {
+    font-size: 18px;
+    color: #555;
+}
+
+
+.grid-container {
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 110px;
+
+}
+
+.line-container {
+    display: flex;
+    flex-wrap: wrap; /* Faz os cards quebrarem a linha quando não houver espaço */
+    align-items: flex-start;
+    gap: 30px;
+    align-self: stretch;
+}
+
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    width: 200px; 
+    height: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+     height: 150px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.card p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+    word-wrap: break-word;
+    text-align: left;
+
+}
+
+.card span {
+    font-weight: bold;
+    color: #000;
+    margin-top: 5px;
+    display: block;
+    text-align: left;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.quantity-controls button {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.quantity-controls .quantity {
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+.bottom-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    z-index: 1000;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.bottom-menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.bottom-menu span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+.cart-button {
+    background-color: #e60000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cart-button:hover {
+    background-color: #cc0000;
+}
+
+.cart-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed; /
+}
+
+
+.accordion-container {
+    margin: 20px 0;
+    width: 640px; /* Largura fixa */
+    
+}
+
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.accordion-body {
+    padding: 15px 20px;
+    display: none; 
+    background-color: white;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+/* Acordeon aberto */
+.accordion.open .accordion-body {
+    display: block;
+}
+
+.accordion.open .arrow-down {
+    transform: rotate(180deg);
+}
+
+.accordion-header svg {
+    transition: transform 0.3s ease;
+}
+
+.cartao-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cartao-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cartao-item input[type="radio"] {
+    margin-right: 10px; /* Espaço entre o botão de rádio e o ícone */
+}
+
+.cartao-label svg {
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
+#adicionar-cartao {
+    background: none;
+    border: none;
+    color: #e60000;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#adicionar-cartao:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para o layout do troco */
+.troco-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.troco-item input[type="text"] {
+    margin-left: 10px;
+    width: 100px; /* Ajuste para o tamanho do campo de texto */
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.troco-item input[type="radio"] {
+    margin-right: 10px;
+}
+
+.troco-item label {
+    display: flex;
+    align-items: center;
+}
+
+.troco-item svg {
+    margin-right: 10px; /* Espaço entre o ícone e o texto/campo */
+}
+
+/* Estilo da mensagem de erro */
+.alert-error {
+    padding: 15px;
+    border: 1px solid #f44336; /* Vermelho para o erro */
+    background-color: #fddede; /* Fundo vermelho claro */
+    color: #f44336; /* Texto vermelho */
+    position: fixed;
+    top: 20px;
+    right: -300px; /* Inicialmente fora da tela */
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s forwards, fadeOut 3s 2.5s forwards; /* Slide e fade */
+    z-index: 1000;
+  }
+  
+  /* Estilo da mensagem de sucesso */
+  .alert-success {
+    padding: 15px;
+    border: 1px solid #4CAF50; /* Verde para sucesso */
+    background-color: #dff0d8; /* Fundo verde claro */
+    color: #4CAF50; /* Texto verde */
+    position: fixed;
+    top: 20px;
+    right: -300px; /* Inicialmente fora da tela */
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s forwards, fadeOut 3s 2.5s forwards; /* Slide e fade */
+    z-index: 1000;
+  }
+  
+  /* Animação para deslizar a mensagem */
+  @keyframes slideIn {
+    to {
+      right: 20px; /* Traz a mensagem para o canto superior direito */
+    }
+  }
+  
+  /* Animação para desaparecer */
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      right: -300px; /* Sai da tela para a direita */
+    }
+  }
+  
+  /* Botão para fechar */
+  .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #f44336;
+  }
+  
+  
+ .progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60px;  /* Tamanho do círculo */
+    height: 60px;
+    background-color: #ccc;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 100px;  /* Ajuste o espaçamento entre os passos */
+    text-align: center;
+    transition: background-color 0.5s ease;
+    font-size: 24px;  /* Tamanho do número */
+    font-weight: bold;
+}
+
+.progress-step p {
+    margin-top: -13px;  /* Ajusta a distância entre o círculo e o texto */
+    font-size: 14px;  /* Tamanho do texto */
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    position: relative;
+    top: 40px;  /* Ajuste a posição do texto */
+    white-space: nowrap;  /* Evita que o texto quebre */
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-around;  /* Distribui os itens igualmente */
+    align-items: center;
+    margin-bottom: 20px;  /* Ajuste para o espaçamento da barra de progresso */
+    padding: 0 20px;  /* Ajuste o padding para centralizar */
+}
+
+.progress-step.completed {
+    background-color: #e60000;  /* Cor da bola completada */
+    color: white;
+}
+
+.progress-step span {
+    color: white;
+}
+
+#finalizar-pedido-btn {
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#finalizar-pedido-btn:hover {
+    background-color: darkred;
+}
+
+
+
+
