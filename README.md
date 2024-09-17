@@ -23,9 +23,8 @@
   <ol>
     <li>
       <ul>
-        <a href="#sobre-o-projeto">Sobre o Projeto</a>
+        <li><a href="#sobre-o-projeto">Sobre o Projeto</a></li>
       </ul>
-        
       <ul  
         <li><a href="#feito-com">Feito Com</a></li>
       </ul>
